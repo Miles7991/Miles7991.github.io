@@ -3,6 +3,13 @@
 -->
 
 <div id="sidebar" class="d-flex flex-column align-items-end">
+  
+  {% unless site.theme_mode %}
+      <button class="mode-toggle btn" aria-label="Switch Mode">
+        <i class="fas fa-adjust" style="font-size:22px;color:gray"></i>
+      </button>
+    {% endunless %}
+
   <div class="profile-wrapper text-center">
     <div id="avatar">
       <a href="{{ '/' | relative_url }}" class="mx-auto">
@@ -53,15 +60,7 @@
 
   <div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center">
 
-    {% unless site.theme_mode %}
-      <button class="mode-toggle btn" aria-label="Switch Mode">
-        <i class="fas fa-adjust"></i>
-      </button>
-
-      {% if site.data.contact.size > 0 %}
-        <span class="icon-border"></span>
-      {% endif %}
-    {% endunless %}
+    
 
     {% for entry in site.data.contact %}
       {% capture url %}
