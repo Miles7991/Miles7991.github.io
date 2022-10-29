@@ -11,6 +11,8 @@
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html lang="en"
   
+    data-mode="dark"
+  
 >
 
   <!--
@@ -43,20 +45,18 @@
 <meta property="og:description" content="This post will guide you how to write a post on Chirpy theme. Even if you have previous experience with Jekyll, this article is worth reading, because many features require specific variables to be set." />
 <link rel="canonical" href="http://localhost:4000/posts/write-a-new-post/" />
 <meta property="og:url" content="http://localhost:4000/posts/write-a-new-post/" />
-<meta property="og:site_name" content="Chirpy" />
+<meta property="og:site_name" content="Shiyu He" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-08-08T14:10:00+08:00" />
+<meta property="article:published_time" content="2019-08-08T00:10:00-06:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Writing a New Post" />
-<meta name="twitter:site" content="@twitter_username" />
-<meta name="twitter:creator" content="@cotes2020" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Cotes Chung","url":"https://github.com/cotes2020/"},"dateModified":"2019-08-08T14:10:00+08:00","datePublished":"2019-08-08T14:10:00+08:00","description":"This post will guide you how to write a post on Chirpy theme. Even if you have previous experience with Jekyll, this article is worth reading, because many features require specific variables to be set.","headline":"Writing a New Post","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/write-a-new-post/"},"url":"http://localhost:4000/posts/write-a-new-post/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Cotes Chung","url":"https://github.com/cotes2020/"},"dateModified":"2019-08-08T00:10:00-06:00","datePublished":"2019-08-08T00:10:00-06:00","description":"This post will guide you how to write a post on Chirpy theme. Even if you have previous experience with Jekyll, this article is worth reading, because many features require specific variables to be set.","headline":"Writing a New Post","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/write-a-new-post/"},"url":"http://localhost:4000/posts/write-a-new-post/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
 
-  <title>Writing a New Post | Chirpy
+  <title>Writing a New Post | Shiyu He
   </title>
 
   <!--
@@ -71,8 +71,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
 <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
 <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-<meta name="apple-mobile-web-app-title" content="Chirpy">
-<meta name="application-name" content="Chirpy">
+<meta name="apple-mobile-web-app-title" content="Shiyu He">
+<meta name="application-name" content="Shiyu He">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
@@ -123,137 +123,6 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
 
   
-    <!--
-  Switch the mode between dark and light.
--->
-
-<script type="text/javascript">
-  class ModeToggle {
-    static get MODE_KEY() { return "mode"; }
-    static get MODE_ATTR() { return "data-mode"; }
-    static get DARK_MODE() { return "dark"; }
-    static get LIGHT_MODE() { return "light"; }
-    static get ID() { return "mode-toggle"; }
-
-    constructor() {
-      if (this.hasMode) {
-        if (this.isDarkMode) {
-          if (!this.isSysDarkPrefer) {
-            this.setDark();
-          }
-        } else {
-          if (this.isSysDarkPrefer) {
-            this.setLight();
-          }
-        }
-      }
-
-      let self = this;
-
-      /* always follow the system prefers */
-      this.sysDarkPrefers.addEventListener("change", () => {
-        if (self.hasMode) {
-          if (self.isDarkMode) {
-            if (!self.isSysDarkPrefer) {
-              self.setDark();
-            }
-
-          } else {
-            if (self.isSysDarkPrefer) {
-              self.setLight();
-            }
-          }
-
-          self.clearMode();
-        }
-
-        self.notify();
-
-      });
-
-    } /* constructor() */
-
-    get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); }
-
-    get isSysDarkPrefer() { return this.sysDarkPrefers.matches; }
-
-    get isDarkMode() { return this.mode === ModeToggle.DARK_MODE; }
-
-    get isLightMode() { return this.mode === ModeToggle.LIGHT_MODE; }
-
-    get hasMode() { return this.mode != null; }
-
-    get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); }
-
-    /* get the current mode on screen */
-    get modeStatus() {
-      if (this.isDarkMode
-        || (!this.hasMode && this.isSysDarkPrefer)) {
-        return ModeToggle.DARK_MODE;
-      } else {
-        return ModeToggle.LIGHT_MODE;
-      }
-    }
-
-    setDark() {
-      $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
-    }
-
-    setLight() {
-      $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
-    }
-
-    clearMode() {
-      $('html').removeAttr(ModeToggle.MODE_ATTR);
-      sessionStorage.removeItem(ModeToggle.MODE_KEY);
-    }
-
-    /* Notify another plugins that the theme mode has changed */
-    notify() {
-      window.postMessage({
-        direction: ModeToggle.ID,
-        message: this.modeStatus
-      }, "*");
-    }
-
-  } /* ModeToggle */
-
-  const toggle = new ModeToggle();
-
-  function flipMode() {
-    if (toggle.hasMode) {
-      if (toggle.isSysDarkPrefer) {
-        if (toggle.isLightMode) {
-          toggle.clearMode();
-        } else {
-          toggle.setLight();
-        }
-
-      } else {
-        if (toggle.isDarkMode) {
-          toggle.clearMode();
-        } else {
-          toggle.setDark();
-        }
-      }
-
-    } else {
-      if (toggle.isSysDarkPrefer) {
-        toggle.setLight();
-      } else {
-        toggle.setDark();
-      }
-    }
-
-    toggle.notify();
-
-  } /* flipMode() */
-
-</script>
-
-  
 </head>
 
 
@@ -269,16 +138,15 @@
       <a href="/" class="mx-auto">
         
           
-          <img src="https://raw.githubusercontent.com/cotes2020/chirpy-images/main/commons/avatar.jpg" alt="avatar" onerror="this.style.display='none'" >
-          <!--img src="https://raw.githubusercontent.com/cotes2020/chirpy-images/main/commons/avatar.jpg" alt="avatar" onerror="this.style.display='none'"-->
+          <img src="https://raw.githubusercontent.com/Miles7991/Miles7991.github.io/main/assets/img/favicons/shiyupic.png" alt="avatar" onerror="this.style.display='none'">
         
       </a>
     </div>
 
     <div class="site-title">
-      <a href="/">Chirpy</a>
+      <a href="/">Shiyu He</a>
     </div>
-    <div class="site-subtitle font-italic">A text-focused Jekyll theme</div>
+    <div class="site-subtitle font-italic">Electrical Engineering graduate passionate about embedded system and communication protocol.</div>
 
   </div><!-- .profile-wrapper -->
 
@@ -335,20 +203,12 @@
   <div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center">
 
     
-      <button class="mode-toggle btn" aria-label="Switch Mode">
-        <i class="fas fa-adjust"></i>
-      </button>
-
-      
-        <span class="icon-border"></span>
-      
-    
 
     
       
 
       
-      <a href="https://github.com/github_username" aria-label="github"
+      <a href="https://github.com/Miles7991" aria-label="github"
         target="_blank" rel="noopener">
         <i class="fab fa-github"></i>
       </a>
@@ -359,7 +219,7 @@
 
       
       <a href="
-          javascript:location.href = 'mailto:' + ['example','domain.com'].join('@')" aria-label="email"
+          javascript:location.href = 'mailto:' + ['she10','ualberta.ca'].join('@')" aria-label="email"
         >
         <i class="fas fa-envelope"></i>
       </a>
@@ -1608,19 +1468,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=Writing+a+New+Post+-+Chirpy&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fwrite-a-new-post%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=Writing+a+New+Post+-+Shiyu+He&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fwrite-a-new-post%2F" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Writing+a+New+Post+-+Chirpy&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fwrite-a-new-post%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Writing+a+New+Post+-+Shiyu+He&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fwrite-a-new-post%2F" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fwrite-a-new-post%2F&text=Writing+a+New+Post+-+Chirpy" data-toggle="tooltip" data-placement="top"
+        <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fwrite-a-new-post%2F&text=Writing+a+New+Post+-+Shiyu+He" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -2055,7 +1915,7 @@ Crea...
     data-ts="1565454840"
     data-df="ll"
     >
-  Aug 11, 2019
+  Aug 10, 2019
 </em>
 
             <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Customize the Favicon</h3>
@@ -2092,7 +1952,7 @@ Crea...
     data-ts="1609716720"
     data-df="ll"
     >
-  Jan  4, 2021
+  Jan  3, 2021
 </em>
 
             <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Enable Google Page Views</h3>
@@ -2378,7 +2238,7 @@ Crea...
       <div class="footer-left">
         <p class="mb-0">
           © 2022
-          <a href="https://twitter.com/username">your_full_name</a>.
+          <a href="https://github.com/Miles7991">Shiyu He</a>.
           
           <span data-toggle="tooltip" data-placement="top"
             title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span>
