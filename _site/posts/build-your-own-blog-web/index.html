@@ -49,7 +49,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Build Your Own Blog Web by Github Pages" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shiyu He"},"dateModified":"2022-11-02T18:13:23-06:00","datePublished":"2022-11-02T17:13:00-06:00","description":"This post is to show how I built this personal blog web based on Github Pages from scratch, the tutorial I followed, and some point you need to notice.","headline":"Build Your Own Blog Web by Github Pages","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/build-your-own-blog-web/"},"url":"http://localhost:4000/posts/build-your-own-blog-web/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Shiyu He"},"dateModified":"2022-11-02T23:14:25-06:00","datePublished":"2022-11-02T17:13:00-06:00","description":"This post is to show how I built this personal blog web based on Github Pages from scratch, the tutorial I followed, and some point you need to notice.","headline":"Build Your Own Blog Web by Github Pages","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/build-your-own-blog-web/"},"url":"http://localhost:4000/posts/build-your-own-blog-web/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -538,6 +538,136 @@
 
       
     
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
       
       
         
@@ -710,6 +840,18 @@
       
 
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
 
     
 
@@ -776,7 +918,7 @@
 
 
 <em class=""
-    data-ts="1667434403"
+    data-ts="1667452465"
     data-df="ll"
     data-toggle="tooltip" data-placement="bottom">
   Nov  2, 2022
@@ -828,8 +970,8 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="534 words">
-  <em>2 min</em> read</span>
+  title="614 words">
+  <em>3 min</em> read</span>
 
     </div>
 
@@ -849,23 +991,6 @@
 </pre></td><td class="rouge-code"><pre><span class="gp">$</span><span class="w"> </span>bash tools/init.sh
 </pre></td></tr></tbody></table></code></div></div>
 <p><a href="https://docs.github.com/en/pages/quickstart"><strong>GitHub Page official Docs</strong></a> is useful but not for the guy who want a quick start. Hope you guys can calm down and spend some time on the right tutorial.</p>
-
-<h2 id="some-notices"><span class="mr-2">Some Notices</span><a href="#some-notices" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<h3 id="useful-website"><span class="mr-2">Useful Website</span><a href="#useful-website" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ol>
-  <li><a href="https://chirpy.cotes.page/posts/getting-started/">The <strong>most</strong> important tutorial by Chirpy</a></li>
-  <li><a href="https://stnava.github.io/lessons/2011/12/29/jekyll-introduction/">Quick introduction to Jekyll</a></li>
-  <li><a href="https://jekyllrb.com/docs/configuration/">How to config your web by ‘_config.yml’ file</a></li>
-  <li><a href="https://aksakalli.github.io/jekyll-doc-theme/docs/cheatsheet/">MarkDown Cheatsheet</a></li>
-</ol>
-
-<h3 id="turn-on-the-github-action"><span class="mr-2">Turn on the GitHub Action</span><a href="#turn-on-the-github-action" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-<p>After turning on the <a href="https://chirpy.cotes.page/posts/getting-started/#deploy-by-using-github-actions">GitHub Action</a> you can build the project and test if the website is workable:</p>
-
-<p><img data-src="https://raw.githubusercontent.com/Miles7991/Miles7991.github.io/main/assets/img/postpic/20221102/githubaction.png" alt="GitHub Action" data-proofer-ignore>
-<em>GitHub Action</em></p>
 
 <h2 id="customize-your-pages"><span class="mr-2">Customize Your Pages</span><a href="#customize-your-pages" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <p>I’m not a HTML guy but I do want to make some difference to the original web. In the following section I will introduce how to customize your pages.</p>
@@ -897,8 +1022,8 @@
 
 <p>Find the file <code class="language-plaintext highlighter-rouge">_includes/sidebar.html</code> in the project, move the section:</p>
 
-<div class="language-liquid highlighter-rouge"><div class="code-header">
-        <span data-label-text="Liquid"><i class="fas fa-code small"></i></span>
+<div class="language-html highlighter-rouge"><div class="code-header">
+        <span data-label-text="HTML"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -908,15 +1033,15 @@
 7
 8
 9
-</pre></td><td class="rouge-code"><pre>
-  &lt;button class="mode-toggle btn" aria-label="Switch Mode"&gt;
-    &lt;i class="fas fa-adjust"&gt;&lt;/i&gt;
-  &lt;/button&gt;
+</pre></td><td class="rouge-code"><pre>{% unless site.theme_mode %}
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mode-toggle btn"</span> <span class="na">aria-label=</span><span class="s">"Switch Mode"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-adjust"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
 
-  
-    &lt;span class="icon-border"&gt;&lt;/span&gt;
-  
-
+  {% if site.data.contact.size &gt; 0 %}
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"icon-border"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  {% endif %}
+{% endunless %}
 </pre></td></tr></tbody></table></code></div></div>
 <p>under:</p>
 <div class="language-html highlighter-rouge"><div class="code-header">
@@ -932,12 +1057,38 @@
 3
 4
 5
-</pre></td><td class="rouge-code"><pre>
+</pre></td><td class="rouge-code"><pre>{% unless site.theme_mode %}
   <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"mode-toggle btn"</span> <span class="na">aria-label=</span><span class="s">"Switch Mode"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fas fa-adjust"</span> <span class="na">style=</span><span class="s">"font-size:22px;color:gray"</span><span class="nt">&gt;&lt;/i&gt;</span>
   <span class="nt">&lt;/button&gt;</span>
-
+{% endunless %}
 </pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="some-notices"><span class="mr-2">Some Notices</span><a href="#some-notices" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="how-to-contain-curly-braces-in-your-code-blocks"><span class="mr-2">How to contain curly braces in your code blocks</span><a href="#how-to-contain-curly-braces-in-your-code-blocks" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p><a href="https://jekyllrb.com/docs/liquid/tags/">Jekyll processes all Liquid filters in code blocks</a>, so if you want to show <code class="language-plaintext highlighter-rouge">{% xxx %}</code> and <code class="language-plaintext highlighter-rouge">{% endxxx %}</code> in your code block, you need to add <code class="language-plaintext highlighter-rouge">render_with_liquid: false</code> in your front matter.</p>
+
+<p><img data-src="https://raw.githubusercontent.com/Miles7991/Miles7991.github.io/main/assets/imgassets/img/postpic/20221102/without.png" alt="without_Setting_render_with_liquid_false" data-proofer-ignore>
+<em>Without Setting render_with_liquid: false</em>
+<img data-src="https://raw.githubusercontent.com/Miles7991/Miles7991.github.io/main/assets/imgassets/img/postpic/20221102/with.png" alt="Setting_render_with_liquid_false" data-proofer-ignore>
+<em>Setting render_with_liquid: false</em></p>
+
+<h3 id="turn-on-the-github-action"><span class="mr-2">Turn on the GitHub Action</span><a href="#turn-on-the-github-action" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>After turning on the <a href="https://chirpy.cotes.page/posts/getting-started/#deploy-by-using-github-actions">GitHub Action</a> you can build the project and test if the website is workable:</p>
+
+<p><img data-src="https://raw.githubusercontent.com/Miles7991/Miles7991.github.io/main/assets/img/postpic/20221102/githubaction.png" alt="GitHub Action" data-proofer-ignore>
+<em>GitHub Action</em></p>
+
+<h3 id="useful-website"><span class="mr-2">Useful Website</span><a href="#useful-website" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ol>
+  <li><a href="https://chirpy.cotes.page/posts/getting-started/">The <strong>most</strong> important tutorial by Chirpy</a></li>
+  <li><a href="https://stnava.github.io/lessons/2011/12/29/jekyll-introduction/">Quick introduction to Jekyll</a></li>
+  <li><a href="https://jekyllrb.com/docs/configuration/">How to config your web by ‘_config.yml’ file</a></li>
+  <li><a href="https://aksakalli.github.io/jekyll-doc-theme/docs/cheatsheet/">MarkDown Cheatsheet</a></li>
+  <li><a href="https://rdmd.readme.io/docs/code-blocks">Highlight Code Block which Jekyll support</a></li>
+</ol>
 
 </div>
 

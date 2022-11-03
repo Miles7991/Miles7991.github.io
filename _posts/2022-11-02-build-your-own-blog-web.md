@@ -4,6 +4,7 @@ author: shiyu
 date: 2022-11-02 17:13:00 -0600 
 categories: [Github Pages]
 tags: [Jekyll]
+render_with_liquid: false
 math: true
 pin: true
 ---
@@ -18,23 +19,6 @@ $ bash tools/init.sh
 ```
 [**GitHub Page official Docs**](https://docs.github.com/en/pages/quickstart) is useful but not for the guy who want a quick start. Hope you guys can calm down and spend some time on the right tutorial. 
 
-
-
-## Some Notices 
-
-### Useful Website
-
-1. [The **most** important tutorial by Chirpy](https://chirpy.cotes.page/posts/getting-started/)
-2. [Quick introduction to Jekyll](https://stnava.github.io/lessons/2011/12/29/jekyll-introduction/)
-3. [How to config your web by '_config.yml' file](https://jekyllrb.com/docs/configuration/)
-4. [MarkDown Cheatsheet](https://aksakalli.github.io/jekyll-doc-theme/docs/cheatsheet/)
-
-
-### Turn on the GitHub Action
-After turning on the [GitHub Action](https://chirpy.cotes.page/posts/getting-started/#deploy-by-using-github-actions) you can build the project and test if the website is workable:
-
-![GitHub Action](/postpic/20221102/githubaction.png)
-_GitHub Action_  
 
 ## Customize Your Pages
 I'm not a HTML guy but I do want to make some difference to the original web. In the following section I will introduce how to customize your pages.
@@ -61,7 +45,7 @@ Chripy support two kind of mode of theme , namely 'dark' and 'light'. You can fi
 
 Find the file `_includes/sidebar.html` in the project, move the section: 
 
-```liquid
+```html
 {% unless site.theme_mode %}
   <button class="mode-toggle btn" aria-label="Switch Mode">
     <i class="fas fa-adjust"></i>
@@ -85,3 +69,28 @@ And delete the `icon-border` section. Finally the button section will be like:
 {% endunless %}
 ```
 {: file='_includes/sidebar.html'}
+
+## Some Notices 
+
+### How to contain curly braces in your code blocks 
+[Jekyll processes all Liquid filters in code blocks](https://jekyllrb.com/docs/liquid/tags/), so if you want to show `{% xxx %}` and `{% endxxx %}` in your code block, you need to add `render_with_liquid: false` in your front matter. 
+
+![without_Setting_render_with_liquid_false](assets/img/postpic/20221102/without.png)
+_Without Setting render_with_liquid: false_
+![Setting_render_with_liquid_false](assets/img/postpic/20221102/with.png)
+_Setting render_with_liquid: false_
+
+
+### Turn on the GitHub Action
+After turning on the [GitHub Action](https://chirpy.cotes.page/posts/getting-started/#deploy-by-using-github-actions) you can build the project and test if the website is workable:
+
+![GitHub Action](/postpic/20221102/githubaction.png)
+_GitHub Action_  
+
+### Useful Website
+
+1. [The **most** important tutorial by Chirpy](https://chirpy.cotes.page/posts/getting-started/)
+2. [Quick introduction to Jekyll](https://stnava.github.io/lessons/2011/12/29/jekyll-introduction/)
+3. [How to config your web by '_config.yml' file](https://jekyllrb.com/docs/configuration/)
+4. [MarkDown Cheatsheet](https://aksakalli.github.io/jekyll-doc-theme/docs/cheatsheet/)
+5. [Highlight Code Block which Jekyll support](https://rdmd.readme.io/docs/code-blocks)

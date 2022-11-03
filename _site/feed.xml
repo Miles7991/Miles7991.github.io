@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Shiyu He</title>
   <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
-  <updated>2022-11-02T23:13:37-06:00</updated>
+  <updated>2022-11-02T23:52:55-06:00</updated>
   <author>
     <name>Shiyu He</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/build-your-own-blog-web/" rel="alternate" type="text/html" title="Build Your Own Blog Web by Github Pages" />
     <published>2022-11-02T17:13:00-06:00</published>
   
-    <updated>2022-11-02T18:13:23-06:00</updated>
+    <updated>2022-11-02T23:14:25-06:00</updated>
   
     <id>http://localhost:4000/posts/build-your-own-blog-web/</id>
     <content src="http://localhost:4000/posts/build-your-own-blog-web/" />
