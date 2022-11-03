@@ -7,12 +7,13 @@
 </code></pre></div></div>
 <p><a href="https://docs.github.com/en/pages/quickstart"><strong>GitHub Page official Docs</strong></a> is useful but not for the guy who want a quick start. Hope you guys can calm down and spend some time on the right tutorial.</p>
 
-<p>###</p>
-
 <h2 id="useful-website">Useful Website</h2>
 
 <ol>
-  <li>The most important tutorial is the <a href="https://chirpy.cotes.page/posts/getting-started/"><strong>Chirpy</strong></a> one, follow the Installation section.</li>
+  <li><a href="https://chirpy.cotes.page/posts/getting-started/">The <strong>most</strong> important tutorial by Chirpy</a></li>
+  <li><a href="https://stnava.github.io/lessons/2011/12/29/jekyll-introduction/">Quick introduction to Jekyll</a></li>
+  <li><a href="https://jekyllrb.com/docs/configuration/">How to config your web by ‘_config.yml’ file</a></li>
+  <li><a href="https://aksakalli.github.io/jekyll-doc-theme/docs/cheatsheet/">MarkDown Cheatsheet</a></li>
 </ol>
 
 <h2 id="some-notices">Some Notices</h2>
@@ -22,3 +23,25 @@
 
 <p><img src="/postpic/20221102/githubaction.png" alt="GitHub Action" width="972" height="589" />
 <em>Full screen width and center alignment</em></p>
+
+<h3 id="customize-your-pages">Customize Your Pages</h3>
+<p>I’m not a HTML guy but I do want to make some difference to the original web, in the following section I will introduce how I modify the icon on the sidebar.</p>
+<h4 id="change-the-sidebar-picture">Change the Sidebar Picture</h4>
+<p>You can set the <code class="language-plaintext highlighter-rouge">img_cdn</code> on the <strong>_config.yml</strong> file, you can see this as the base address of your pic file but this is a url which you can find on the github website:</p>
+<ol>
+  <li>Push the project contained the pic to the Repository.</li>
+  <li>Find the pic on Repository and  <strong>Open the link in new tab</strong></li>
+  <li>Copy the address of this image, put the front part of the link to <code class="language-plaintext highlighter-rouge">img_cdn</code> in my case is: <code class="language-plaintext filepath highlighter-rouge">https://raw.githubusercontent.com/Miles7991/Miles7991.github.io/main/assets/img</code>; and the end of the link is the name of each picture eg: <code class="language-plaintext highlighter-rouge">/sidebar/profile_photo.png</code> or <code class="language-plaintext highlighter-rouge">/postpic/20221102/fig1.png</code></li>
+</ol>
+
+<h4 id="add-more-icon-on-the-bottom-of-sidebar">Add more icon on the bottom of sidebar</h4>
+<p>Find the file <code class="language-plaintext highlighter-rouge">_data/contact.yml</code> in the project, and add following code at the end of the file:</p>
+<div file="_data/contact.yml" class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s2">"</span><span class="s">phone"</span>
+  <span class="na">icon</span><span class="pi">:</span> <span class="s2">"</span><span class="s">fas</span><span class="nv"> </span><span class="s">fa-phone"</span>
+  <span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">tel:+1(XXX)XXX</span><span class="nv"> </span><span class="s">XXXX"</span>
+</code></pre></div></div>
+
+<h4 id="change-the-position-of-the-change-theme">Change the position of the ‘Change Theme’</h4>
+<p>Chripy support two kind mode of Theme, namely ‘dark’ and ‘light’. You can fix one of them in <code class="language-plaintext highlighter-rouge">_config.yml</code> file or letting the website switch between two mode. As default, the bottom located at the bottom of the sidebar. I move that on the top.</p>
+
+<p>Find the file <code class="language-plaintext highlighter-rouge">_includes/sidebar.html</code> in the project</p>
