@@ -75,9 +75,9 @@ And delete the `icon-border` section. Finally the button section will be like:
 ### How to contain curly braces in your code blocks 
 [Jekyll processes all Liquid filters in code blocks](https://jekyllrb.com/docs/liquid/tags/), so if you want to show `{% xxx %}` and `{% endxxx %}` in your code block, you need to add `render_with_liquid: false` in your front matter. 
 
-![without_Setting_render_with_liquid_false](assets/img/postpic/20221102/without.png)
+![without_Setting_render_with_liquid_false](/postpic/20221102/without.png)
 _Without Setting render_with_liquid: false_
-![Setting_render_with_liquid_false](assets/img/postpic/20221102/with.png)
+![Setting_render_with_liquid_false](/postpic/20221102/with.png)
 _Setting render_with_liquid: false_
 
 
