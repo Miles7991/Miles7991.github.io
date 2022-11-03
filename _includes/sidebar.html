@@ -4,11 +4,11 @@
 
 <div id="sidebar" class="d-flex flex-column align-items-end">
   
-  
-  <button class="mode-toggle btn" aria-label="Switch Mode">
-    <i class="fas fa-adjust" style="font-size:22px;color:gray"></i>
-  </button>
-  
+  {% unless site.theme_mode %}
+    <button class="mode-toggle btn" aria-label="Switch Mode">
+      <i class="fas fa-adjust" style="font-size:22px;color:gray"></i>
+    </button>
+  {% endunless %}
 
   <div class="profile-wrapper text-center">
     <div id="avatar">
