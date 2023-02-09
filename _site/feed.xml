@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Shiyu He</title>
   <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
-  <updated>2022-11-02T23:52:55-06:00</updated>
+  <updated>2023-02-08T17:50:30-07:00</updated>
   <author>
     <name>Shiyu He</name>
     <uri>http://localhost:4000/</uri>
@@ -12,11 +12,48 @@
   <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
     href="http://localhost:4000/"/>
-  <generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator>
-  <rights> © 2022 Shiyu He </rights>
+  <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
+  <rights> © 2023 Shiyu He </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Turn Your IPAD to The Screen of Raspberry Pi</title>
+    <link href="http://localhost:4000/posts/turn-your-IPad-to-A-Debain-Computer/" rel="alternate" type="text/html" title="Turn Your IPAD to The Screen of Raspberry Pi" />
+    <published>2023-02-08T09:00:00-07:00</published>
+  
+    <updated>2023-02-08T09:00:00-07:00</updated>
+  
+    <id>http://localhost:4000/posts/turn-your-IPad-to-A-Debain-Computer/</id>
+    <content src="http://localhost:4000/posts/turn-your-IPad-to-A-Debain-Computer/" />
+    <author>
+      <name>shiyu</name>
+    </author>
+
+  
+    
+    <category term="Tools" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      In this post I will introduce how to use IPad to be the screen of Raspberry pi and how to use PI as code server so that you can use VScode on your IPad.
+
+Background
+I guess you will have the same question when you see this post: Why do we want to use a cable connection rather than a WIFI connection which is easier to set up? The cable can give a more reliable connection between the IPad and Ras...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -24,7 +61,7 @@
     <link href="http://localhost:4000/posts/build-your-own-blog-web/" rel="alternate" type="text/html" title="Build Your Own Blog Web by Github Pages" />
     <published>2022-11-02T17:13:00-06:00</published>
   
-    <updated>2022-11-02T23:14:25-06:00</updated>
+    <updated>2023-02-08T17:17:38-07:00</updated>
   
     <id>http://localhost:4000/posts/build-your-own-blog-web/</id>
     <content src="http://localhost:4000/posts/build-your-own-blog-web/" />
@@ -34,7 +71,7 @@
 
   
     
-    <category term="Github Pages" />
+    <category term="Tools" />
     
   
 

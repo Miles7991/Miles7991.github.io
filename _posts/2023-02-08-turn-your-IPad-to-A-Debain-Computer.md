@@ -135,8 +135,8 @@ For more information please check [**Tech Craft's**](https://techcraft.co/videos
 
 
 ## Reference
-1. https://www.youtube.com/watch?v=L8r6kMod7Vw
-2. https://nyac.at/posts/raspi-with-ipad
-3. https://yiwei.dev/raspberrypi-ipad/
-4. https://techcraft.co/videos/2022/2/vscode-on-ipad-pro-full-setup-guide-with-raspberry-pi/
+1. <https://www.youtube.com/watch?v=L8r6kMod7Vw>
+2. <https://nyac.at/posts/raspi-with-ipad>
+3. <https://yiwei.dev/raspberrypi-ipad/>
+4. <https://techcraft.co/videos/2022/2/vscode-on-ipad-pro-full-setup-guide-with-raspberry-pi/>
 

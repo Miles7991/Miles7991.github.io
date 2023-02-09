@@ -1,10 +1,25 @@
 [
   
   {
+    "title": "Turn Your IPAD to The Screen of Raspberry Pi",
+    "url": "/posts/turn-your-IPad-to-A-Debain-Computer/",
+    "categories": "Tools",
+    "tags": "Jekyll",
+    "date": "2023-02-08 09:00:00 -0700",
+    
+
+
+
+
+
+    "snippet": "In this post I will introduce how to use IPad to be the screen of Raspberry pi and how to use PI as code server so that you can use VScode on your IPad.BackgroundI guess you will have the same ques..."
+  },
+  
+  {
     "title": "Build Your Own Blog Web by Github Pages",
     "url": "/posts/build-your-own-blog-web/",
-    "categories": "Github Pages",
-    "tags": "Jekyll",
+    "categories": "Tools",
+    "tags": "Jekyll, Blogging",
     "date": "2022-11-02 17:13:00 -0600",
     
 
