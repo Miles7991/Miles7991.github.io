@@ -58,7 +58,7 @@ leasefile-ro
 {: file='/etc/dnsmasq.d/usb0'}
 should be note that `192.168.59.7` is the broadcast address and cannot be used by devices.
 
-Finally, To stop the default DHCP software from messing with our `usb0` interface we need to add `denyinterfaces usb0` at the end of `/etc/dhcpcd.conf`.{: .filepath}
+Finally, To stop the default DHCP software from messing with our `usb0` interface we need to add `denyinterfaces usb0` at the end of `/etc/dhcpcd.conf`{: .filepath}
 
 ## Using VScode on IPad
 ### Installing NodeJS
@@ -96,7 +96,7 @@ You should see something like this:
 ```
 
 ### Configuring code-server
-By default, `code-server` is only accessible from the machine it is installed on. If we want to used it on Safari on IPad, we need to edit the `bind-addr` property in the config file at `~/.config/code-server/config.yaml`.{: .filepath}.
+By default, `code-server` is only accessible from the machine it is installed on. If we want to used it on Safari on IPad, we need to edit the `bind-addr` property in the config file at `~/.config/code-server/config.yaml`{: .filepath}.
 
 ```console
 bind-addr: 0.0.0.0:8080
@@ -105,7 +105,7 @@ password: mypassword
 cert: false
 ```
 ### Start Code Server automatically
-As the superuser create following file at `/etc/systemd/system/code-server.service`.{: .filepath}
+As the superuser create following file at `/etc/systemd/system/code-server.service`{: .filepath}
 ```console
 [Unit]
 Description=code-server
@@ -122,7 +122,7 @@ ExecStart=/home/pi/.yarn/bin/code-server
 [Install]
 WantedBy=multi-user.target
 ```
-.{:. filepath=`/etc/systemd/system/code-server.service`}
+{:. filepath=`/etc/systemd/system/code-server.service`}
 
 you should change the path on `WorkingDirectory`, `ExecStart` and `User`, `Group`  if the user name is other than `'pi'`.
 
