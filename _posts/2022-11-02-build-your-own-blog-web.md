@@ -2,8 +2,8 @@
 title: Build Your Own Blog Web by Github Pages
 author: shiyu
 date: 2022-11-02 17:13:00 -0600 
-categories: [Github Pages]
-tags: [Jekyll]
+categories: [Tools]
+tags: [Jekyll,Blogging]
 render_with_liquid: false
 math: true
 pin: true
