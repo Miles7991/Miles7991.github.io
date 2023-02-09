@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Shiyu He</title>
   <subtitle>A minimal, responsive, and powerful Jekyll theme for presenting professional writing.</subtitle>
-  <updated>2023-02-08T17:50:30-07:00</updated>
+  <updated>2023-02-08T18:04:27-07:00</updated>
   <author>
     <name>Shiyu He</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/turn-your-IPad-to-A-Debain-Computer/" rel="alternate" type="text/html" title="Turn Your IPAD to The Screen of Raspberry Pi" />
     <published>2023-02-08T09:00:00-07:00</published>
   
-    <updated>2023-02-08T09:00:00-07:00</updated>
+    <updated>2023-02-08T17:58:28-07:00</updated>
   
     <id>http://localhost:4000/posts/turn-your-IPad-to-A-Debain-Computer/</id>
     <content src="http://localhost:4000/posts/turn-your-IPad-to-A-Debain-Computer/" />
