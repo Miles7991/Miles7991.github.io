@@ -122,7 +122,7 @@ ExecStart=/home/pi/.yarn/bin/code-server
 [Install]
 WantedBy=multi-user.target
 ```
-{:. file=`/etc/systemd/system/code-server.service`}
+{: file=`/etc/systemd/system/code-server.service`}
 
 you should change the path on `WorkingDirectory`, `ExecStart` and `User`, `Group`  if the user name is other than `'pi'`.
 
