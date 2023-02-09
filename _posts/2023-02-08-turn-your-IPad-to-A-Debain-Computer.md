@@ -56,7 +56,7 @@ dhcp-option=3
 leasefile-ro
 ```
 {: file='/etc/dnsmasq.d/usb0'}
-should be note that `192.168.59.7` is the broadcast address and cannot be used by devices.
+should be noted that `192.168.59.7` is the broadcast address and cannot be used by devices.
 
 Finally, To stop the default DHCP software from messing with our `usb0` interface we need to add `denyinterfaces usb0` at the end of `/etc/dhcpcd.conf`{: .filepath}
 
@@ -122,7 +122,7 @@ ExecStart=/home/pi/.yarn/bin/code-server
 [Install]
 WantedBy=multi-user.target
 ```
-{:. filepath=`/etc/systemd/system/code-server.service`}
+{:. file=`/etc/systemd/system/code-server.service`}
 
 you should change the path on `WorkingDirectory`, `ExecStart` and `User`, `Group`  if the user name is other than `'pi'`.
 
